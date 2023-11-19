@@ -1,14 +1,14 @@
-FROM zilzalll/zthon:slim-buster
+FROM zed-thon/zelzal:slim-buster
 
-RUN git clone https://github.com/Zilzalll/ZThon.git /root/zira
+RUN git clone https://github.com/sarahassang/ZelZal.git /root/zthon
 
-WORKDIR /root/zira
+WORKDIR /root/zthon
 
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 RUN npm i -g npm
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/zira/bin:$PATH"
+ENV PATH="/home/zthon/bin:$PATH"
 
-CMD ["python3","-m","zira"]
+CMD ["python3","-m","zthon"]
